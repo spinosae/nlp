@@ -1,6 +1,7 @@
 import csv, nltk, random
 from nltk.stem import *
 import string
+import pickle
 
 def read_file(filepath):
     with open(filepath, 'r') as file:
@@ -18,6 +19,7 @@ all_tokens = [token for (tweet, label) in tweets_tokens for token in tweet]
 features = [x for (x,freq) in nltk.FreqDist(all_tokens).most_common() if not x in nltk.corpus.stopwords.words('english')]
 feature_set = [({feature: feature in tokens for feature in features }, label) for (tokens, label) in tweets_tokens]
 shuffled = random.shuffle(feature_set)
+pickle.dump(feature_set, open( "toJiachun.p", "wb" ) )
 train_size = len(feature_set)*2/3
 train = feature_set[0:train_size]
 test = feature_set[train_size:]
