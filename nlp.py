@@ -1,13 +1,26 @@
-import csv, nltk, random
-from nltk.stem import *
-import string
-import pickle
+import csv, nltk, random, string, pickle
+from nltk.stem import SnowballStemmer, WordNetLemmatizer
+import tagger.CMUTweetTagger as tagger
+
+TAG = "java -XX:ParallelGCThreads=2 -Xmx500m -jar tagger/ark-tweet-nlp-0.3.2.jar --model tagger/model.penn"
+stemmer = SnowballStemmer('english')
+lemmatizer = WordNetLemmatizer()
 
 def read_file(filepath):
     with open(filepath, 'r') as file:
         reader = csv.reader(file)
-        return [(str(line[0]).translate(None, string.punctuation).decode("utf8"), line[1]) for line in reader if line[1] in ['1','3']]
+        return [(line[0], line[1]) for line in reader if line[1]]
 
+def tag_file(filepath):
+    document = read_file(filepath)
+    sents, labels = zip(*document)
+    tag_tokens = tagger.runtagger_parse(sents, TAG)
+    return zip(tag_tokens, labels)
+
+def legitimate(token):
+
+def clean(tag):
+    return [([(token, tag) for (token, tag, prob) in tokens if legitimate(token)], label) for (tokens, label) in tag]
 
 def tokenize(dataset):
     stemmer=SnowballStemmer('english')
