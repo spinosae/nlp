@@ -1,0 +1,95 @@
+##clean parameters: {'punctuation': False, 'stemming': True, 'lemmatization': True, 'pos-tag': False}
+##indices: {'test': [2], 'train': [0, 1]}
+
+##feature size: 957
+text line 7: Reasons why i love my new macbook pro : battery life , no overheating , no loud fan , fast processor Now to make it last for the next 10+yrs ..
+guess: 0 label: 1
+text line 36: apple suck , overrated and overhyped !!!
+guess: 1 label: 0
+text line 56: that is the stupidest emoji . Further , I'd like to say that Citi field suck , with sole exception of the food . The Apple is dumb .
+guess: 1 label: 0
+text line 71: RT So basically with the 6S hardly anything ha changed . Good job Apple
+guess: 1 label: 0
+text line 79: They feel good . A little le travel than the MBP key , but not much . Not like the MacBook . I can type fast on the new keyboard .
+guess: 0 label: 1
+text line 104: I can't take my 27 " iMac home either . That's a good thing . I have a 15 " MBP if I need a mobile machine .
+guess: 0 label: 1
+text line 118: the mbp is good , run win 8 but wont upg to win 10 , no boot camp support . Good kit , bad sw upg path for 3k of kit
+guess: 0 label: 1
+text line 124: I love jammin out with the music loud a fuck with my new macbook pro and all my new music !! Makes my day go by so much better
+guess: 0 label: 1
+text line 129: Apple Music is so much better than Spotify . Good job Jobs . #rip
+guess: 0 label: 1
+text line 132: RT Yes , one reason why I lean towards using Apples own apps for better or worse .
+guess: 0 label: 1
+
+
+
+##clean parameters: {'punctuation': False, 'stemming': True, 'lemmatization': True, 'pos-tag': False}
+##indices: {'test': [1], 'train': [0, 2]}
+
+##feature size: 1031
+text line 11: is that good ? the 13 retina mbp graphic are horrific
+guess: 1 label: 0
+text line 14: Apple News ha not done a good job with accessibility . Cant zoom , cant go into landscape mode , cant increase font size , cant select text
+guess: 1 label: 0
+text line 63: Placing a geometry node in Houdini 15 on my MBP make it crash . Off to a good start .
+guess: 1 label: 0
+text line 68: I didn't even know there wa an update wtf good job apple way to notify me
+guess: 1 label: 0
+text line 86: Good job Apple . Siri always understands when I tell her to play without any odd pronunciation .
+guess: 0 label: 1
+text line 92: And Microsoft office doesn't work in El Capitan . Apple engineer aren't doing a very good job this time around and making fake promise
+guess: 1 label: 0
+text line 113: RT " edison charger are worse then apple charger "
+guess: 0 label: 1
+text line 120: my MBP doesn't run so good ;)
+guess: 1 label: 0
+text line 121: Okay good job apple for getting the middle finger emoji but get your shit together there's still no volleyball emoji
+guess: 1 label: 0
+
+
+
+##clean parameters: {'punctuation': False, 'stemming': True, 'lemmatization': True, 'pos-tag': False}
+##indices: {'test': [0], 'train': [1, 2]}
+
+##feature size: 1006
+text line 8: RT Apple suck now . let all find a new company to worship
+guess: 1 label: 0
+text line 25: Good job Apple ! You get me to do your stupid update and all I get for 5 hour is a black screen to connect to ...
+guess: 1 label: 0
+text line 26: Its confusing , and Apple hasnt done a good job of explaining .
+guess: 1 label: 0
+text line 29: i love my iphone but apple suck
+guess: 1 label: 0
+text line 41: apple company suck
+guess: 1 label: 0
+text line 48: Wow that suck ! How about fighting together against apple ?
+guess: 1 label: 0
+text line 55: Apple suck Ass or Apples iPhone 6 suck as
+guess: 1 label: 0
+text line 67: New update seems to be the issue for many . Good job , Apple .
+guess: 1 label: 0
+text line 68: Apple suck now . let all find a new company to worship
+guess: 1 label: 0
+text line 76: This apple's news ish want to be Flipboard so bad .. But it suck .. The worst part is you can't delete it
+guess: 1 label: 0
+text line 90: I rlly love apple but this suck
+guess: 1 label: 0
+text line 94: So basically with the 6S hardly anything ha changed . Good job Apple
+guess: 1 label: 0
+text line 96: my brand new macbook pro is making such loud noise , overheating , and won't turn on .. im definitely cursed when it come to technology
+guess: 1 label: 0
+text line 129: 80 worse off now cause I broke my phone this morning . Nice one apple for making possibly the EASIEST phone to break and charging so much !
+guess: 1 label: 0
+text line 136: ha that worry me , cause Im on a mbp also . Might be something they arent handling right . Time will tell . Good looking out
+guess: 1 label: 0
+text line 141: Apparently Siri is incapable of giving Celsius temperature today . Good job Apple .
+guess: 1 label: 0
+text line 143: apple suck tbh
+guess: 1 label: 0
+text line 148: apple cable suck alot
+guess: 1 label: 0
+
+
+

@@ -121,12 +121,13 @@ def run_test(params, indice):
     predicts = fit.classify_many(attrs)
     session_info = '##clean parameters: '+str(params) +'\n'
     session_info += '##indices: '+str(indice) + '\n\n'
+    session_info += '##feature size: '+str(len(features)) +'\n'
     print(session_info)
     errors = ""
     for i in range(len(predicts)):
         if predicts[i] != labels[i]:
             error_tweet = test_set[i][0]
-            print(error_tweet)
+            # print(error_tweet)
             if params["pos-tag"]:
                 error_tweet = [word for (word, tag) in error_tweet]
             errors += 'text line {!s}: {}\nguess: {} label: {}\n'.format(i, " ".join(error_tweet), predicts[i], labels[i])
@@ -134,17 +135,18 @@ def run_test(params, indice):
     report = sklearn.metrics.classification_report(labels, predicts)
     values = re.findall("(?<=\W)\d*\.?\d+(?=\W)|/", report)
     values = [[values[i*5 + j] for j in range(5)] for i in range(3)]
-    values = map(float, values[2][1:4])
+    values = map(float, values[2][1:4]) + [len(features), len(all_tokens)]
     report = session_info  + report + '\n\n'
     errors = session_info  + errors + '\n\n'
     return (report, values, errors)
 
 def process_result(results):
     report, values, errors = map(list, zip(*results))
+    count = len(report)
     report = reduce(lambda x, y:x+y, report)
     errors = reduce(lambda x, y:x+y, errors)
     values = reduce(lambda x, y:map(add, x, y), values)
-    values = [value/len(values) for value in values]
+    values = [value/count for value in values]
     avg = ['{0:.2f}'.format(x) for x in values]
     report += '\navg / total       {avg[0]}      {avg[1]}      {avg[2]}       \n'.format(avg=avg)
     return (report, errors, values)
@@ -157,6 +159,7 @@ def auto_run(params):
         rep.write(report)
     with open(out + '_errors.txt', 'w') as err:
         err.write(errors)
+    return values
 
 csv_files = ["set" + str(index) + ".csv" for index in range(1, 4)]
 pickle_files = ["set" + str(index) + "_tag.pickle" for index in range(1, 4)]
@@ -164,13 +167,27 @@ docs = load_pickles(pickle_files)
 indices = gen_index(len(docs), 2)
 keys = ['stemming', 'lemmatization', 'punctuation', 'pos-tag']
 
-values = [[True, False, False, False],
-          [False, True, False, False],
-          [False, False, False, True],
-          [False, False, False, False],
-          [False, False, True, False],
-          [False, False, False, False]
-          ]
-params = [dict(zip(keys, value)) for value in values]
-map(auto_run, params)
-
+param_set = [[True, False, False, False],
+             [False, True, False, False],
+             [False, False, True, False],
+             [False, False, False, True],
+             [True, False, True, False],
+             [False, True, True, False],
+             [True, False, False, True],
+             [True, True, False, False],
+             [False, True, False, True],
+             [False, False, True, True],
+             [True, False, True, True],
+             [False, True, True, True],
+             [True, False, True, True],
+             [True, True, False, True],
+             [True, True, True, False]
+             ]
+params = [dict(zip(keys, value)) for value in param_set]
+values = map(auto_run, params)
+table = map(add, param_set, values)
+header = [keys + ['precision','recall','f-measure','feature count', 'token count']]
+table = header + table
+table_csv = '\n'.join([', '.join([str(x) for x in l]) for l in table])
+with open('table.csv','w') as tbl:
+    tbl.write(table_csv)

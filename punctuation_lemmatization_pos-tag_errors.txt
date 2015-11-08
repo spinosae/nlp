@@ -1,0 +1,69 @@
+##clean parameters: {'punctuation': True, 'stemming': False, 'lemmatization': True, 'pos-tag': True}
+##indices: {'test': [2], 'train': [0, 1]}
+
+##feature size: 1060
+text line 7: reason whi i love my new macbook pro : batteri life , no overh , no loud fan , fast processor now to make it last for the next 10+yr ..
+guess: 0 label: 1
+text line 71: rt so basic with the 6s hard anyth has chang . good job appl
+guess: 1 label: 0
+text line 79: they feel good . a littl less travel than the mbp key , but not much . not like the macbook . i can type fast on the new keyboard .
+guess: 0 label: 1
+text line 104: i can't take my 27 " imac home either . that a good thing . i have a 15 " mbp if i need a mobil machin .
+guess: 0 label: 1
+text line 124: i love jammin out with the music loud as fuck with my new macbook pro and all my new music !! make my day go by so much better
+guess: 0 label: 1
+text line 132: rt yes , one reason whi i lean toward use appl own app for better or wors .
+guess: 0 label: 1
+
+
+
+##clean parameters: {'punctuation': True, 'stemming': False, 'lemmatization': True, 'pos-tag': True}
+##indices: {'test': [1], 'train': [0, 2]}
+
+##feature size: 1148
+text line 11: is that good ? the 13 retina mbp graphic are horrif
+guess: 1 label: 0
+text line 14: appl news has not done a good job with access . cant zoom , cant go into landscap mode , cant increas font size , cant select text
+guess: 1 label: 0
+text line 36: i just type shit instead of shirt and my phone didn't even correct me . good job appl .
+guess: 1 label: 0
+text line 63: place a geometri node in houdini 15 on my mbp make it crash . off to a good start .
+guess: 1 label: 0
+text line 67: hate to say it guy . what mac do you have . i had this exact problem on my mbp - it was the motherboard . good luck
+guess: 1 label: 0
+text line 68: i didn't even know there was an updat wtf good job appl way to notifi me
+guess: 1 label: 0
+text line 92: and microsoft offic doesn't work in el capitan . appl engin aren't do a veri good job this time around and make fake promis
+guess: 1 label: 0
+text line 113: rt " edison charger are wors then appl charger "
+guess: 0 label: 1
+text line 120: my mbp doesn't run so good ;)
+guess: 1 label: 0
+text line 121: okay good job appl for get the middl finger emoji but get your shit togeth there still no volleybal emoji
+guess: 1 label: 0
+
+
+
+##clean parameters: {'punctuation': True, 'stemming': False, 'lemmatization': True, 'pos-tag': True}
+##indices: {'test': [0], 'train': [1, 2]}
+
+##feature size: 1102
+text line 25: good job appl ! you get me to do your stupid updat and all i get for 5 hour is a black screen to connect to ...
+guess: 1 label: 0
+text line 26: it confus , and appl hasnt done a good job of explain .
+guess: 1 label: 0
+text line 67: new updat seem to be the issu for mani . good job , appl .
+guess: 1 label: 0
+text line 94: so basic with the 6s hard anyth has chang . good job appl
+guess: 1 label: 0
+text line 136: ha that worri me , caus im on a mbp also . might be someth they arent handl right . time will tell . good look out
+guess: 1 label: 0
+text line 139: normal , fuck appl . today , just for now , good job , appl .
+guess: 0 label: 1
+text line 140: the verdict is in : mbp drive is dead . anyon in #sf recommend a good data recoveri shop ? #backupyourdata
+guess: 1 label: 0
+text line 141: appar siri is incap of give celsius temperatur today . good job appl .
+guess: 1 label: 0
+
+
+

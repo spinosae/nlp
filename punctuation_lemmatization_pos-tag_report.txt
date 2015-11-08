@@ -1,19 +1,19 @@
-##clean parameters: {'punctuation': True, 'stemming': False, 'lemmatization': False, 'pos-tag': False}
+##clean parameters: {'punctuation': True, 'stemming': False, 'lemmatization': True, 'pos-tag': True}
 ##indices: {'test': [2], 'train': [0, 1]}
 
-##feature size: 659
+##feature size: 1060
              precision    recall  f1-score   support
 
-          0       0.93      0.96      0.94        79
-          1       0.96      0.92      0.94        71
+          0       0.94      0.99      0.96        79
+          1       0.99      0.93      0.96        71
 
-avg / total       0.94      0.94      0.94       150
+avg / total       0.96      0.96      0.96       150
 
 
-##clean parameters: {'punctuation': True, 'stemming': False, 'lemmatization': False, 'pos-tag': False}
+##clean parameters: {'punctuation': True, 'stemming': False, 'lemmatization': True, 'pos-tag': True}
 ##indices: {'test': [1], 'train': [0, 2]}
 
-##feature size: 705
+##feature size: 1148
              precision    recall  f1-score   support
 
           0       0.98      0.87      0.92        70
@@ -22,10 +22,10 @@ avg / total       0.94      0.94      0.94       150
 avg / total       0.94      0.93      0.93       150
 
 
-##clean parameters: {'punctuation': True, 'stemming': False, 'lemmatization': False, 'pos-tag': False}
+##clean parameters: {'punctuation': True, 'stemming': False, 'lemmatization': True, 'pos-tag': True}
 ##indices: {'test': [0], 'train': [1, 2]}
 
-##feature size: 686
+##feature size: 1102
              precision    recall  f1-score   support
 
           0       0.99      0.92      0.95        84
@@ -35,4 +35,4 @@ avg / total       0.95      0.95      0.95       150
 
 
 
-avg / total       0.94      0.94      0.94       
+avg / total       0.95      0.95      0.95       
