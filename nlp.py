@@ -1,5 +1,5 @@
 from __future__ import division
-import csv, nltk, random, string, pickle, re, itertools, sklearn
+import csv, nltk, random, string, pickle, re, itertools, sklearn, os
 from operator import add
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
 import tagger.CMUTweetTagger as tagger
@@ -69,8 +69,8 @@ def process_token(token, stem, lemma):
 def clean(tagged_doc, stem, lemma, keep_punc, keep_tag):
     tweets, labels = map(list, zip(*tagged_doc))
     tweets = [[(process_token(token, stem, lemma), tag) for (token, tag, prob) in tweet if
-                 qualified(token, keep_punc)] for tweet in tweets]
-    if(not keep_tag):
+               qualified(token, keep_punc)] for tweet in tweets]
+    if (not keep_tag):
         tweets = de_tag(tweets)
     return zip(tweets, labels)
 
@@ -81,19 +81,21 @@ def de_tag(tweets):
 
 def de_label(docs_features):
     attrs, labels = map(list, zip(*docs_features))
-    return (attrs,labels)
+    return (attrs, labels)
+
 
 def assemble_tokens(tokens):
     return ' '.join(tokens.keys())
 
+
 def split_docs(docs, indices):
-    train_set = reduce(lambda x, y: x+y, [docs[i] for i in indices['train']])
-    test_set = reduce(lambda x, y: x+y, [docs[i] for i in indices['test']])
+    train_set = reduce(lambda x, y: x + y, [docs[i] for i in indices['train']])
+    test_set = reduce(lambda x, y: x + y, [docs[i] for i in indices['test']])
     return (train_set, test_set)
 
 
-def test(a,b,c):
-    print(str(len(a)) + " " +str(len(b)) +" "+ str(len(c)))
+def test(a, b, c):
+    print(str(len(a)) + " " + str(len(b)) + " " + str(len(c)))
 
 
 def featurize(docs, features):
@@ -102,26 +104,26 @@ def featurize(docs, features):
 
 def gen_index(num, select):
     num_l = range(num)
-    trains = [list(x) for x in itertools.combinations(num_l,select)]
+    trains = [list(x) for x in itertools.combinations(num_l, select)]
     tests = [[x for x in num_l if not x in train] for train in trains]
     combined = zip(trains, tests)
-    return [dict(zip(['train','test'], d)) for d in combined]
+    return [dict(zip(['train', 'test'], d)) for d in combined]
 
 
 def run_test(params, indice):
-    train_set, test_set = map(lambda x:clean(x, *params.values()), split_docs(docs, indice))
+    train_set, test_set = map(lambda x: clean(x, *params.values()), split_docs(docs, indice))
     all_tokens = [token for (tweet, label) in train_set for token in tweet]
     # all_tokens = set(token for (tweet, label) in train_set for token in tweet)
     features = [x for (x, freq) in nltk.FreqDist(all_tokens).most_common() if
                 not x[0] in nltk.corpus.stopwords.words('english')]
-    train_set_features, test_set_features = map(lambda x:featurize(x,features), [train_set,test_set])
+    train_set_features, test_set_features = map(lambda x: featurize(x, features), [train_set, test_set])
     fit = nltk.NaiveBayesClassifier.train(train_set_features)
     fit.show_most_informative_features()
     attrs, labels = de_label(test_set_features)
     predicts = fit.classify_many(attrs)
-    session_info = '##clean parameters: '+str(params) +'\n'
-    session_info += '##indices: '+str(indice) + '\n\n'
-    session_info += '##feature size: '+str(len(features)) +'\n'
+    session_info = '##clean parameters: ' + str(params) + '\n'
+    session_info += '##indices: ' + str(indice) + '\n\n'
+    session_info += '##feature size: ' + str(len(features)) + '\n'
     print(session_info)
     errors = ""
     for i in range(len(predicts)):
@@ -130,29 +132,32 @@ def run_test(params, indice):
             # print(error_tweet)
             if params["pos-tag"]:
                 error_tweet = [word for (word, tag) in error_tweet]
-            errors += 'text line {!s}: {}\nguess: {} label: {}\n'.format(i, " ".join(error_tweet), predicts[i], labels[i])
+            errors += 'text line {!s}: {}\nguess: {} label: {}\n'.format(i, " ".join(error_tweet), predicts[i],
+                                                                         labels[i])
     errors += '\n'
     report = sklearn.metrics.classification_report(labels, predicts)
     values = re.findall("(?<=\W)\d*\.?\d+(?=\W)|/", report)
-    values = [[values[i*5 + j] for j in range(5)] for i in range(3)]
+    values = [[values[i * 5 + j] for j in range(5)] for i in range(3)]
     values = map(float, values[2][1:4]) + [len(features), len(all_tokens)]
-    report = session_info  + report + '\n\n'
-    errors = session_info  + errors + '\n\n'
+    report = session_info + report + '\n\n'
+    errors = session_info + errors + '\n\n'
     return (report, values, errors)
+
 
 def process_result(results):
     report, values, errors = map(list, zip(*results))
     count = len(report)
-    report = reduce(lambda x, y:x+y, report)
-    errors = reduce(lambda x, y:x+y, errors)
-    values = reduce(lambda x, y:map(add, x, y), values)
-    values = [value/count for value in values]
+    report = reduce(lambda x, y: x + y, report)
+    errors = reduce(lambda x, y: x + y, errors)
+    values = reduce(lambda x, y: map(add, x, y), values)
+    values = [value / count for value in values]
     avg = ['{0:.2f}'.format(x) for x in values]
     report += '\navg / total       {avg[0]}      {avg[1]}      {avg[2]}       \n'.format(avg=avg)
     return (report, errors, values)
 
+
 def auto_run(params):
-    out = '_'.join([key for key in params.keys() if params[key]])
+    out = OUTPUT_FOLDER + '_'.join([key for key in params.keys() if params[key]])
     results = map(lambda x: run_test(params, x), indices)
     report, errors, values = process_result(results)
     with open(out + '_report.txt', 'w') as rep:
@@ -161,8 +166,17 @@ def auto_run(params):
         err.write(errors)
     return values
 
-csv_files = ["set" + str(index) + ".csv" for index in range(1, 4)]
-pickle_files = ["set" + str(index) + "_tag.pickle" for index in range(1, 4)]
+
+def ensure_folder(folder):
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+
+
+DATA_FOLDER = "data/"
+OUTPUT_FOLDER = "output/"
+map(ensure_folder, [DATA_FOLDER, OUTPUT_FOLDER])
+csv_files = [DATA_FOLDER + "set" + str(index) + ".csv" for index in range(1, 4)]
+pickle_files = [DATA_FOLDER + "set" + str(index) + "_tag.pickle" for index in range(1, 4)]
 docs = load_pickles(pickle_files)
 indices = gen_index(len(docs), 2)
 keys = ['stemming', 'lemmatization', 'punctuation', 'pos-tag']
@@ -187,7 +201,7 @@ param_set = [[True, False, False, False],
 params = [dict(zip(keys, value)) for value in param_set]
 values = map(auto_run, params)
 table = map(add, param_set, values)
-header = [keys + ['precision','recall','f-measure','feature count', 'token count']]
+header = [keys + ['precision', 'recall', 'f-measure', 'feature count', 'token count']]
 table = header + table
 
 for row in table:
@@ -196,14 +210,14 @@ for row in table:
 
 table_csv = '\n'.join([', '.join(l) for l in table])
 
-with open('table.csv','w') as tbl:
+with open(OUTPUT_FOLDER + 'table.csv', 'w') as tbl:
     tbl.write(table_csv)
 
 
-# with open('table.csv','r+') as tbl:
-#     tabl = tbl.readlines()
-#     tabl = [row.split(',') for row in tabl]
-#     table = [['{}'.format(str(x).strip().strip('""')) for x in col] for col in tabl]
-#     table_csv = '\n'.join([', '.join(l) for l in table])
-#     print(table_csv)
-#     tbl.write(table_csv)
+    # with open('table.csv','r+') as tbl:
+    #     tabl = tbl.readlines()
+    #     tabl = [row.split(',') for row in tabl]
+    #     table = [['{}'.format(str(x).strip().strip('""')) for x in col] for col in tabl]
+    #     table_csv = '\n'.join([', '.join(l) for l in table])
+    #     print(table_csv)
+    #     tbl.write(table_csv)
