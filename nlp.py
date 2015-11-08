@@ -192,7 +192,7 @@ table = header + table
 
 for row in table:
     for i in range(len(row)):
-        row[i] = '"{}"'.format(str(row[i]).strip())
+        row[i] = '{}'.format(str(row[i]).strip())
 
 table_csv = '\n'.join([', '.join(l) for l in table])
 
@@ -200,7 +200,10 @@ with open('table.csv','w') as tbl:
     tbl.write(table_csv)
 
 
-# with open('table.csv','r+') as tbl:
-#     tabl = tbl.readlines()
-#     tabl = [row.split(',') for row in tabl]
-#     table = [['"{}"'.format(str(x).strip()) for x in col] for col in tabl]
+with open('table.csv','r+') as tbl:
+    tabl = tbl.readlines()
+    tabl = [row.split(',') for row in tabl]
+    table = [['{}'.format(str(x).strip().strip('""')) for x in col] for col in tabl]
+    table_csv = '\n'.join([', '.join(l) for l in table])
+    print(table_csv)
+    tbl.write(table_csv)
