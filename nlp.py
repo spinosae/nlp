@@ -168,6 +168,7 @@ indices = gen_index(len(docs), 2)
 keys = ['stemming', 'lemmatization', 'punctuation', 'pos-tag']
 
 param_set = [[True, False, False, False],
+             [False, False, False, False],
              [False, True, False, False],
              [False, False, True, False],
              [False, False, False, True],

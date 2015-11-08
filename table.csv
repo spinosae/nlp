@@ -1,5 +1,6 @@
 stemming, lemmatization, punctuation, pos-tag, precision, recall, f-measure, feature count, token count
 True, False, False, False, 0.93, 0.923333333333, 0.923333333333, 932.666666667, 4277.33333333
+False, False, False, False, 0.933333333333, 0.93, 0.93, 965.333333333, 4277.33333333
 False, True, False, False, 0.926666666667, 0.92, 0.92, 1030.66666667, 4884.0
 False, False, True, False, 0.943333333333, 0.94, 0.94, 683.333333333, 4277.33333333
 False, False, False, True, 0.946666666667, 0.94, 0.94, 1195.0, 4277.33333333
