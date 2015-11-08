@@ -1,0 +1,70 @@
+##clean parameters: {'punctuation': False, 'stemming': False, 'lemmatization': False, 'pos-tag': True}
+##indices: {'test': [2], 'train': [0, 1]}
+
+text line 7: Reasons why i love my new macbook pro battery life no overheating no loud fan fast processor Now to make it last for the next 10+yrs
+guess: 0 label: 1
+text line 29: Hey APPLE El Capitan SUCKS thanks
+guess: 1 label: 0
+text line 71: RT So basically with the 6S hardly anything has changed Good job Apple
+guess: 1 label: 0
+text line 79: They feel good A little less travel than the MBP keys but not much Not like the MacBook I can type fast on the new keyboard
+guess: 0 label: 1
+text line 104: I can't take my 27 iMac home either That's a good thing I have a 15 MBP if I need a mobile machine
+guess: 0 label: 1
+text line 124: I love jammin out with the music loud as fuck with my new macbook pro and all my new music Makes my day go by so much better
+guess: 0 label: 1
+text line 132: RT Yes one reason why I lean towards using Apples own apps for better or worse
+guess: 0 label: 1
+
+
+
+##clean parameters: {'punctuation': False, 'stemming': False, 'lemmatization': False, 'pos-tag': True}
+##indices: {'test': [1], 'train': [0, 2]}
+
+text line 11: is that good the 13 retina mbp graphics are horrific
+guess: 1 label: 0
+text line 14: Apple News has not done a good job with accessibility Cant zoom cant go into landscape mode cant increase font size cant select text
+guess: 1 label: 0
+text line 36: I just typed shit instead of shirt and my phone didn't even correct me Good job Apple
+guess: 1 label: 0
+text line 63: Placing a geometry node in Houdini 15 on my MBP makes it crash Off to a good start
+guess: 1 label: 0
+text line 67: hate to say it guys What Mac do you have I had this EXACT problem on my MBP it was the motherboard Good luck
+guess: 1 label: 0
+text line 68: I didn't even know there was an update wtf good job apple way to notify me
+guess: 1 label: 0
+text line 92: And Microsoft office doesn't work in El Capitan Apple engineers aren't doing a very good job this time around and making fake promises
+guess: 1 label: 0
+text line 113: RT edison chargers are worse then apple chargers
+guess: 0 label: 1
+text line 120: my MBP doesn't run so good
+guess: 1 label: 0
+text line 121: Okay good job apple for getting the middle finger emoji but get your shit together there's still no volleyball emoji
+guess: 1 label: 0
+
+
+
+##clean parameters: {'punctuation': False, 'stemming': False, 'lemmatization': False, 'pos-tag': True}
+##indices: {'test': [0], 'train': [1, 2]}
+
+text line 25: Good job Apple You get me to do your stupid update and all I get for 5 hours is a black screen to connect to
+guess: 1 label: 0
+text line 26: Its confusing and Apple hasnt done a good job of explaining
+guess: 1 label: 0
+text line 67: New update seems to be the issue for many Good job Apple
+guess: 1 label: 0
+text line 94: So basically with the 6S hardly anything has changed Good job Apple
+guess: 1 label: 0
+text line 96: my brand new macbook pro is making such loud noises overheating and won't turn on im definitely cursed when it comes to technology
+guess: 1 label: 0
+text line 129: 80 worse off now cause I broke my phone this morning Nice one apple for making possibly the EASIEST phone to break and charging so much
+guess: 1 label: 0
+text line 136: ha that worries me cause Im on a mbp also Might be something they arent handling right Time will tell Good looking out
+guess: 1 label: 0
+text line 140: The verdict is in MBP drive is dead Anyone in recommend a good data recovery shop
+guess: 1 label: 0
+text line 141: Apparently Siri is incapable of giving Celsius temperatures today Good job Apple
+guess: 1 label: 0
+
+
+
