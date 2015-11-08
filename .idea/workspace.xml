@@ -2,48 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab81edf8-2b89-488b-aa28-9678d50c138f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ark-tweet-nlp-python" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lemmatization_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lemmatization_pos-tag_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lemmatization_pos-tag_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lemmatization_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/new_model.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pos-tag_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pos-tag_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_lemmatization_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_lemmatization_pos-tag_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_lemmatization_pos-tag_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_lemmatization_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_pos-tag_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_pos-tag_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_stemming_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_stemming_lemmatization_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_stemming_lemmatization_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_stemming_pos-tag_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_stemming_pos-tag_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/punctuation_stemming_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stemming_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stemming_lemmatization_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stemming_lemmatization_pos-tag_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stemming_lemmatization_pos-tag_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stemming_lemmatization_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stemming_pos-tag_errors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stemming_pos-tag_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stemming_report.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/table.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.csv" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/set1.csv" afterPath="$PROJECT_DIR$/data/set1.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/set1_tag.pickle" afterPath="$PROJECT_DIR$/data/set1_tag.pickle" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/set2.csv" afterPath="$PROJECT_DIR$/data/set2.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/set2_tag.pickle" afterPath="$PROJECT_DIR$/data/set2_tag.pickle" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/set3.csv" afterPath="$PROJECT_DIR$/data/set3.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/set3_tag.pickle" afterPath="$PROJECT_DIR$/data/set3_tag.pickle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nlp.py" afterPath="$PROJECT_DIR$/nlp.py" />
     </list>
     <ignored path="nlp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="nlp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nlp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6369168">
-              <caret line="175" column="23" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="177" column="62" selection-start-line="177" selection-start-column="62" selection-end-line="177" selection-end-column="62" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -76,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tagger/README.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="44" />
+            <state vertical-scroll-proportion="1.3373737">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,12 +56,13 @@
       <list>
         <option value="$PROJECT_DIR$/test.csv" />
         <option value="$PROJECT_DIR$/nlp.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="291" />
-    <option name="y" value="115" />
+    <option name="x" value="177" />
+    <option name="y" value="64" />
     <option name="width" value="1065" />
     <option name="height" value="923" />
   </component>
@@ -336,16 +297,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="291" y="115" width="1065" height="923" extended-state="0" />
-    <editor active="true" />
+    <frame x="177" y="64" width="1065" height="923" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21229587" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4169329" sideWeight="0.334854" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32780612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30994898" sideWeight="0.50373137" order="7" side_tool="false" content_ui="tabs" x="187" y="632" width="765" height="246" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.49626866" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33035713" sideWeight="0.49270073" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32780612" sideWeight="0.49626866" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33035713" sideWeight="0.49270073" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32780612" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -480,14 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tagger/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/set3_tag.pickle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -536,13 +489,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tagger/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.032467533">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nlp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6369168">
-          <caret line="175" column="23" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="177" column="62" selection-start-line="177" selection-start-column="62" selection-end-line="177" selection-end-column="62" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3373737">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
