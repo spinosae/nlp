@@ -189,6 +189,18 @@ values = map(auto_run, params)
 table = map(add, param_set, values)
 header = [keys + ['precision','recall','f-measure','feature count', 'token count']]
 table = header + table
-table_csv = '\n'.join([', '.join([str(x) for x in l]) for l in table])
+
+for row in table:
+    for i in range(len(row)):
+        row[i] = '"{}"'.format(str(row[i]).strip())
+
+table_csv = '\n'.join([', '.join(l) for l in table])
+
 with open('table.csv','w') as tbl:
     tbl.write(table_csv)
+
+
+# with open('table.csv','r+') as tbl:
+#     tabl = tbl.readlines()
+#     tabl = [row.split(',') for row in tabl]
+#     table = [['"{}"'.format(str(x).strip()) for x in col] for col in tabl]
