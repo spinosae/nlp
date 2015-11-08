@@ -200,10 +200,10 @@ with open('table.csv','w') as tbl:
     tbl.write(table_csv)
 
 
-with open('table.csv','r+') as tbl:
-    tabl = tbl.readlines()
-    tabl = [row.split(',') for row in tabl]
-    table = [['{}'.format(str(x).strip().strip('""')) for x in col] for col in tabl]
-    table_csv = '\n'.join([', '.join(l) for l in table])
-    print(table_csv)
-    tbl.write(table_csv)
+# with open('table.csv','r+') as tbl:
+#     tabl = tbl.readlines()
+#     tabl = [row.split(',') for row in tabl]
+#     table = [['{}'.format(str(x).strip().strip('""')) for x in col] for col in tabl]
+#     table_csv = '\n'.join([', '.join(l) for l in table])
+#     print(table_csv)
+#     tbl.write(table_csv)
